@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IBATORA! — EP</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px 70px;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .cover {
+            width: min(420px, 90vw);
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 30px;
+            border-radius: 4px;
+            box-shadow: 0 20px 60px rgba(0,0,0,.7);
+        }
+
+        .artist {
+            font-size: 14px;
+            letter-spacing: 5px;
+            color: #aaa;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(32px, 7vw, 64px);
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            max-width: 550px;
+            margin: auto;
+            color: #999;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* BUTTONS */
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 30px 0 60px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 170px;
+            padding: 15px 24px;
+            border: 1px solid #333;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            transition: .2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #ddd;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #fff;
+        }
+
+        .button.secondary:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* TRACKLIST */
+
+        .section-title {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .tracklist {
+            border-top: 1px solid #222;
+        }
+
+        .track {
+            border-bottom: 1px solid #222;
+            padding: 18px 0;
+        }
+
+        .track-top {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .number {
+            width: 30px;
+            color: #555;
+            font-size: 13px;
+        }
+
+        .track-info {
+            flex: 1;
+        }
+
+        .track-name {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .play-button {
+            border: 0;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 12px;
+            display: none;
+        }
+
+        audio.active {
+            display: block;
+        }
+
+        /* SUPPORT */
+
+        .support {
+            margin-top: 70px;
+            padding: 35px 25px;
+            border: 1px solid #222;
+            text-align: center;
+        }
+
+        .support h2 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .support p {
+            color: #888;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        /* SOCIAL */
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .social a {
+            color: #888;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .social a:hover {
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #444;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding-top: 25px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <!-- TROQUE "capa.jpg" PELA SUA CAPA -->
+        <img
+            src="Capa vintage de Summer EletroRap’s.jpeg"
+            alt="Capa do EP"
+            class="cover"
+        >
+
+        <div class="artist">
+            IBATORA!
+        </div>
+
+        <!-- TROQUE PELO NOME DO EP -->
+        <h1>SUMMER ELETRORAP'S</h1>
+
+        <p class="description">
+            Um projeto independente, disponibilizado diretamente
+            para quem acompanha e fortalece o trabalho.
+        </p>
+
+        <div class="actions">
+
+            <!-- TROQUE PELO LINK DO SEU ZIP -->
+            <a
+                href="iBaTORA! - Summer Eletrorap's.rar"
+                class="button"
+                download
+            >
+                ↓ Baixar EP
+            </a>
+
+            <!-- OPCIONAL -->
+            <a
+                href="https://youtube.com/"
+                target="_blank"
+                class="button secondary"
+            >
+                ▶ Ouvir
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRACKLIST -->
+
+    <div class="section-title">
+        Tracklist
+    </div>
+
+    <section class="tracklist">
+
+
+        <!-- FAIXA 01 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    01
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                       iBATORA!, GSAUCE - Curtir Comigo (Citação Jorge Ben (ivy brussel)
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track1')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track1"
+                controls
+                src="1 - iBATORA!, GSAUCE - Curitr Comigo (Citação Jorge Ben (ivy brussel).wav"
+            ></audio>
+
+        </div>
+
+
+        <!-- FAIXA 02 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    02
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        iBATORA!, GSAUCE e Akin - Hoje Eu Não Quero Falar de Crime
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track2')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track2"
+                controls
+                src="2 - iBATORA!, GSAUCE e Akin - Hoje Eu Não Quero Falar de Crime.wav"
+            ></audio>
+
+        </div>
+
+
+        <!-- FAIXA 03 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    03
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                       iBATORA!, GSAUCE  e Akin - Não tem Praia no Interior
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="3 - iBATORA!, GSAUCE  e Akin - Não tem Praia no Interior.wav"
+            ></audio>
+
+        </div>
+
+        <!-- FAIXA 04 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    04
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        iBATORA!, GSAUCE e Akin - Quando tu Vem me Ver
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="4 - iBATORA!, GSAUCE e Akin - Quando tu Vem me Ver.wav"
+            ></audio>
+        </div>
+
+        <!-- FAIXA 05 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    05
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                       iBATORA!, GSAUCE e Akin - Toxico
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="5 - iBATORA!, GSAUCE e Akin - Toxico.wav"
+            ></audio>
+
+        </div>
+
+        <!-- FAIXA 06 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    06
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                       iBaTORA, GSAUCE e Akin - Fronteira
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="6 - iBaTORA, GSAUCE e Akin - Fronteira.wav"
+            ></audio>
+
+        </div>
+
+        <!-- FAIXA 07 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    07
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                       iBATORA!, Patrik G - Boa p Noiz
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="7 - iBATORA!, Patrik G - Boa p Noiz.wav"
+            ></audio>
+
+        </div>    
+
+        <!-- FAIXA 08 -->
+
+        <div class="track">
+
+            <div class="track-top">
+
+                <div class="number">
+                    08
+                </div>
+
+                <div class="track-info">
+                    <div class="track-name">
+                        iBATORA!, GSAUCE e Akin - Bonde Da Neurose
+                    </div>
+                </div>
+
+                <button
+                    class="play-button"
+                    onclick="playTrack('track3')"
+                >
+                    ▶
+                </button>
+
+            </div>
+
+            <audio
+                id="track3"
+                controls
+                src="8 - iBATORA!, GSAUCE e Akin - Bonde Da Neurose.wav"
+            ></audio>
+
+        </div>    
+
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="support">
+
+        <h2>Curtiu o projeto?</h2>
+
+        <p>
+            Se você curtiu o EP, fortalece o trabalho seguindo
+            minhas redes e acompanhando os próximos lançamentos.
+        </p>
+
+        <div class="social">
+
+            <a
+                href="https://www.instagram.com/ibatoracpdc"
+                target="_blank"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://youtube.com/@iBaTORA"
+                target="_blank"
+            >
+                YouTube
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        IBATORA! © 2026
+    </footer>
+
+</div>
+
+
+<script>
+
+function playTrack(id) {
+
+    const selected = document.getElementById(id);
+
+    document.querySelectorAll("audio").forEach(audio => {
+
+        if (audio !== selected) {
+            audio.pause();
+            audio.classList.remove("active");
+        }
+
+    });
+
+    selected.classList.toggle("active");
+
+    if (selected.paused) {
+        selected.play();
+    }
+
+}
+
+</script>
+
+</body>
+</html>
